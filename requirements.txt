@@ -1,0 +1,4 @@
+flask
+flask-cors
+https.server
+werkzeug

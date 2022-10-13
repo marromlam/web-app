@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<header>
+    <title>Document Storage</title>
+</header>
+
+<body>
+    <div>Simple document storage</div>
+    <hr>
+    <div> User credentials </div>
+    <div>
+      <label for="username">User:</label>
+      <input type="text" id="username" name="username">
+      <label for="password">Password:</label>
+      <input type="password" id="password">
+    </div>
+    <hr>
+    <div> Upload and retrieve files from server </div>
+    <div>
+        <label for="ufilename">File:</label>
+        <!-- <input type="text" id="ufilename"> -->
+        <!-- <button onclick="uploadCallback()"> Upload </button> -->
+        <form enctype = "multipart/form-data" onsubmit="return false;" >
+        <input id="file" type="file" name="static_file" />
+        <button id="upload-button" onclick="uploadFile(this.form)"> Upload </button>
+    </div>
+    <div>
+        <label for="dfilename">File:</label>
+    </div>
+    <div>
+        <input type="text" id="dfilename">
+        <button onclick="downloadFile()"> Download </button>
+    </div>
+    <hr>
+    <div> Print / debug info </div>
+    <div>
+        <div id="result-container"></div>
+    </div>
+</body>
+
+ <script type="text/javascript" src="/static/app.js"></script>
+ </script>
+</body>
+</html>
